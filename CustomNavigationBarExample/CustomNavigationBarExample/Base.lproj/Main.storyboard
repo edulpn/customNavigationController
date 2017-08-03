@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K0J-dQ-dEi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="Bjp-ig-wWY">
+            <objects>
+                <navigationController id="K0J-dQ-dEi" customClass="CustomNavigationController" customModule="CustomNavigationBarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P7r-7E-fgs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LcE-Mn-EgM" kind="relationship" relationship="rootViewController" id="KsF-OZ-Plx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQm-qx-vBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="123"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="EXt-ha-MsS">
+            <objects>
+                <viewController id="LcE-Mn-EgM" customClass="MainViewController" customModule="CustomNavigationBarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rd7-uN-9i9"/>
+                        <viewControllerLayoutGuide type="bottom" id="T3d-Zz-Gt6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nLs-eR-DJT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-Zi-5AW">
+                                <rect key="frame" x="20" y="243.5" width="335" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdJ-eV-Scb">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <state key="normal" title="Blue Navigation Bar"/>
+                                        <connections>
+                                            <segue destination="Scc-Fu-SGe" kind="show" id="69z-h5-nJL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yj1-oL-sNS">
+                                        <rect key="frame" x="0.0" y="50" width="335" height="30"/>
+                                        <state key="normal" title="White Navigation Bar"/>
+                                        <connections>
+                                            <segue destination="WvZ-Pg-Rz6" kind="show" id="4jD-3x-CVd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaO-ad-aNj">
+                                        <rect key="frame" x="0.0" y="100" width="335" height="30"/>
+                                        <state key="normal" title="Clear &amp; Light Background Navigation Bar"/>
+                                        <connections>
+                                            <segue destination="ldl-0Y-zBP" kind="show" id="jbT-gU-myD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDW-Sq-7zV">
+                                        <rect key="frame" x="0.0" y="150" width="335" height="30"/>
+                                        <state key="normal" title="Clear &amp; Dark Background Navigation Bar"/>
+                                        <connections>
+                                            <segue destination="GPN-aD-W7h" kind="show" id="gDY-Vv-Zmg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Yj1-oL-sNS" firstAttribute="centerX" secondItem="DOV-Zi-5AW" secondAttribute="centerX" id="OiA-kV-tXc"/>
+                                    <constraint firstItem="aDW-Sq-7zV" firstAttribute="centerX" secondItem="DOV-Zi-5AW" secondAttribute="centerX" id="fOh-fO-td4"/>
+                                    <constraint firstItem="TaO-ad-aNj" firstAttribute="centerX" secondItem="DOV-Zi-5AW" secondAttribute="centerX" id="g9d-S5-qPa"/>
+                                    <constraint firstItem="jdJ-eV-Scb" firstAttribute="centerX" secondItem="DOV-Zi-5AW" secondAttribute="centerX" id="qs5-Wb-H9I"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DOV-Zi-5AW" firstAttribute="centerY" secondItem="nLs-eR-DJT" secondAttribute="centerY" id="0yn-0X-cYO"/>
+                            <constraint firstAttribute="trailing" secondItem="DOV-Zi-5AW" secondAttribute="trailing" constant="20" id="68R-q5-uj3"/>
+                            <constraint firstItem="DOV-Zi-5AW" firstAttribute="leading" secondItem="nLs-eR-DJT" secondAttribute="leading" constant="20" id="A9k-ag-c4g"/>
+                            <constraint firstItem="DOV-Zi-5AW" firstAttribute="centerX" secondItem="nLs-eR-DJT" secondAttribute="centerX" id="MNV-qX-lWh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="myR-2i-See"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYf-ag-Wcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="123"/>
+        </scene>
+        <!--Blue Navigation Bar View Controller-->
+        <scene sceneID="5ie-qi-6qs">
+            <objects>
+                <viewController id="Scc-Fu-SGe" customClass="BlueNavigationBarViewController" customModule="CustomNavigationBarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bOZ-dC-sNZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xfx-Al-KVV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PYX-fq-iM6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8e-A7-HQ2">
+                                <rect key="frame" x="115" y="318.5" width="144" height="30"/>
+                                <state key="normal" title="White Navigation Bar"/>
+                                <connections>
+                                    <segue destination="WvZ-Pg-Rz6" kind="show" id="ZyO-7U-dFI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W8e-A7-HQ2" firstAttribute="centerX" secondItem="PYX-fq-iM6" secondAttribute="centerX" id="Acp-sM-IuM"/>
+                            <constraint firstItem="W8e-A7-HQ2" firstAttribute="centerY" secondItem="PYX-fq-iM6" secondAttribute="centerY" id="O75-i4-mcL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUd-yh-5j0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="-1033"/>
+        </scene>
+        <!--White Navigation Bar View Controller-->
+        <scene sceneID="xct-OQ-nDl">
+            <objects>
+                <viewController id="WvZ-Pg-Rz6" customClass="WhiteNavigationBarViewController" customModule="CustomNavigationBarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VGm-mx-Xfa"/>
+                        <viewControllerLayoutGuide type="bottom" id="dPr-bf-26X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xbc-G0-OaH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW3-vm-fQi">
+                                <rect key="frame" x="120.5" y="318.5" width="134" height="30"/>
+                                <state key="normal" title="Blue Navigation Bar"/>
+                                <connections>
+                                    <segue destination="Scc-Fu-SGe" kind="show" id="J9u-eh-byR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cW3-vm-fQi" firstAttribute="centerY" secondItem="xbc-G0-OaH" secondAttribute="centerY" id="Cvy-uS-cvD"/>
+                            <constraint firstItem="cW3-vm-fQi" firstAttribute="centerX" secondItem="xbc-G0-OaH" secondAttribute="centerX" id="Evr-1D-wzQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uax-if-JyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="-356"/>
+        </scene>
+        <!--Clear Dark Navigation Bar View Controller-->
+        <scene sceneID="Mlq-W9-5dz">
+            <objects>
+                <viewController id="GPN-aD-W7h" customClass="ClearDarkNavigationBarViewController" customModule="CustomNavigationBarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WmY-rY-g0b"/>
+                        <viewControllerLayoutGuide type="bottom" id="RmT-fq-ofb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CMZ-vg-g4K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4Q-1d-1RR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="994"/>
+        </scene>
+        <!--Clear Light Navigation Bar View Controller-->
+        <scene sceneID="dyv-sJ-oJd">
+            <objects>
+                <viewController id="ldl-0Y-zBP" customClass="ClearLightNavigationBarViewController" customModule="CustomNavigationBarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lnt-0O-g8N"/>
+                        <viewControllerLayoutGuide type="bottom" id="rAH-O0-3dh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="elW-bO-hpR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.68239397321428574" green="0.94863281249999998" blue="0.11702008928571428" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDG-DF-cr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="325"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZyO-7U-dFI"/>
+        <segue reference="J9u-eh-byR"/>
+    </inferredMetricsTieBreakers>
+</document>
